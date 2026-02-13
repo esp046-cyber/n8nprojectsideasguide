@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVA AI Automation Projects 2026 - 100 Projects Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            padding: 1%;
+            line-height: 1.4;
+            font-size: 13px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            padding: 12px 2%;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 6px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: #dbeafe;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 8px;
+            margin: 12px 1%;
+        }
+
+        .stat-card {
+            background: #1e293b;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            border: 2px solid #3b82f6;
+        }
+
+        .stat-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: #3b82f6;
+        }
+
+        .stat-label {
+            font-size: 10px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+
+        .search-bar {
+            margin: 12px 1%;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid #3b82f6;
+            border-radius: 6px;
+            background: #1e293b;
+            color: #e2e8f0;
+            font-size: 13px;
+        }
+
+        .search-bar input::placeholder {
+            color: #94a3b8;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 1%;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .toggle-btn {
+            background: #334155;
+            color: #cbd5e1;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .results-count {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 6px;
+            margin: 12px 1%;
+            overflow-x: auto;
+            padding-bottom: 6px;
+        }
+
+        .tab {
+            padding: 8px 14px;
+            background: #334155;
+            border: none;
+            border-radius: 6px;
+            color: #cbd5e1;
+            font-size: 11px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+
+        .tab:hover {
+            background: #475569;
+        }
+
+        .tab.active {
+            background: #3b82f6;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .projects-container {
+            margin: 0 1%;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border-left: 4px solid #3b82f6;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateX(4px);
+        }
+
+        .project-category {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #7c3aed;
+            color: #ffffff;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 6px;
+        }
+
+        .client-type {
+            font-size: 11px;
+            color: #a78bfa;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .project-description {
+            font-size: 12px;
+            color: #cbd5e1;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .project-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .detail-item {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #3b82f6;
+        }
+
+        .complexity-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .complexity-beginner {
+            background: #10b981;
+        }
+
+        .complexity-intermediate {
+            background: #f59e0b;
+        }
+
+        .complexity-advanced {
+            background: #ef4444;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .tech-tag {
+            padding: 3px 8px;
+            background: #0f172a;
+            color: #10b981;
+            border-radius: 4px;
+            font-size: 10px;
+            border: 1px solid #10b981;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 98%;
+            margin: 16px 1%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 16px 1%;
+            margin-top: 16px;
+            font-size: 11px;
+            color: #64748b;
+            border-top: 1px solid #334155;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 TechVA AI Automation Projects 2026</h1>
+            <div class="subtitle">Complete n8n Workflow Automation Guide - 100 Ready-to-Sell Project Ideas</div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalProjects">100</div>
+                <div class="stat-label">Total Projects</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalCategories">20+</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Industries</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">$500-12K</div>
+                <div class="stat-label">Value Range</div>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="🔍 Search by project, client type, industry, or keyword...">
+        </div>
+
+        <div class="controls">
+            <button class="toggle-btn" id="toggleClientType">👁️ Show Client Types</button>
+            <div class="results-count" id="resultsCount">Showing 100 of 100 projects</div>
+        </div>
+
+        <div class="tabs" id="categoryTabs"></div>
+
+        <div class="projects-container" id="projectsContainer"></div>
+
+        <button class="download-btn" onclick="downloadHTML()">📥 Download Complete 100-Project Catalog (HTML File)</button>
+
+        <footer>
+            <p style="font-size: 14px; font-weight: 600; color: #cbd5e1;">© 2026 TechVA AI Automation Solutions | Powered by n8n</p>
+            <p>Built for automation agencies, consultants, and entrepreneurs</p>
+            <p style="margin-top: 8px; font-size: 10px; color: #475569;">
+                Industries Covered: E-commerce • Healthcare • Real Estate • Legal • Education • SaaS • Agencies • Fitness • Beauty • Restaurants • Hospitality • Construction • Manufacturing • Nonprofits • Events
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const projects = [
+            // CRM & SALES (15 projects)
+            {
+                category: 'crm',
+                title: 'Automated Lead Scoring & Nurturing System',
+                description: 'Automatically score leads based on behavior, assign to sales reps, and trigger personalized email sequences using AI-powered insights.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'High',
+                value: '$2K-5K',
+                clientType: 'All Industries',
+                tech: ['HubSpot', 'OpenAI', 'Gmail', 'Airtable']
+            },
+            {
+                category: 'sales',
+                title: 'Instant Lead Response System (Speed to Lead)',
+                description: 'Respond to new leads within 60 seconds via SMS/email, qualify with AI questions, schedule calls automatically. Never lose a hot lead again.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'Very High',
+                value: '$1K-2.5K',
+                clientType: 'All Industries',
+                tech: ['Twilio', 'Gmail', 'Calendly', 'OpenAI']
+            },
+            {
+                category: 'sales',
+                title: 'Lead Magnet to Sales Pipeline',
+                description: 'Capture leads from PDFs/ebooks, send to CRM, trigger nurture sequences, track engagement, and alert sales when hot.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Very High',
+                value: '$1.5K-3K',
+                clientType: 'All Industries',
+                tech: ['ConvertKit', 'HubSpot', 'OpenAI', 'Slack']
+            },
+            {
+                category: 'sales',
+                title: 'Website Chat to Qualified Meeting',
+                description: 'Capture chat conversations, qualify with AI, extract contact info, book meetings automatically - all while visitor is engaged.',
+                complexity: 'Intermediate',
+                time: '4-5 hours',
+                roi: 'Very High',
+                value: '$2K-4K',
+                clientType: 'SaaS, Agencies, Legal',
+                tech: ['Intercom', 'Claude API', 'Calendly', 'HubSpot']
+            },
+            {
+                category: 'sales',
+                title: 'Cold Outreach Response Manager',
+                description: 'Monitor replies to cold emails/LinkedIn, categorize responses (interested/not interested/meeting), route to sales, auto-follow-up.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'High',
+                value: '$2K-4K',
+                clientType: 'SaaS, Agencies, Real Estate',
+                tech: ['Gmail', 'LinkedIn', 'OpenAI', 'Airtable']
+            },
+            {
+                category: 'sales',
+                title: 'Lead Enrichment & Scoring Engine',
+                description: 'Automatically enrich leads with company data, social profiles, tech stack info. Score based on ideal customer profile and assign to sales.',
+                complexity: 'Advanced',
+                time: '6-8 hours',
+                roi: 'Very High',
+                value: '$4K-7K',
+                clientType: 'SaaS, Agencies',
+                tech: ['Clearbit', 'Apollo.io', 'OpenAI', 'Salesforce']
+            },
+            {
+                category: 'crm',
+                title: 'No-Response Follow-up Automation',
+                description: 'Track all unanswered emails, auto-send personalized follow-ups on schedule, escalate if still no response. Never let prospects go cold.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'Very High',
+                value: '$1K-2K',
+                clientType: 'All Industries',
+                tech: ['Gmail', 'HubSpot', 'OpenAI', 'Slack']
+            },
+            {
+                category: 'crm',
+                title: 'Birthday & Anniversary Automation',
+                description: 'Track client/prospect birthdays and anniversaries, send personalized messages, gift cards, or special offers automatically.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'Medium',
+                value: '$800-1.5K',
+                clientType: 'All Industries',
+                tech: ['HubSpot', 'Gmail', 'Amazon API', 'Airtable']
+            },
+            {
+                category: 'crm',
+                title: 'Post-Meeting Follow-up System',
+                description: 'After every meeting, auto-send recap email with notes, action items, next steps, and calendar invite for follow-up.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'High',
+                value: '$1K-2K',
+                clientType: 'All Industries',
+                tech: ['Google Calendar', 'Gmail', 'Notion', 'OpenAI']
+            },
+            {
+                category: 'sales',
+                title: 'Proposal Generation & Tracking System',
+                description: 'Automatically create customized proposals from templates, track opens/views, and follow up with prospects at optimal times.',
+                complexity: 'Intermediate',
+                time: '5-7 hours',
+                roi: 'Very High',
+                value: '$3K-7K',
+                clientType: 'Agencies, Legal, SaaS',
+                tech: ['PandaDoc', 'Salesforce', 'OpenAI', 'Outlook']
+            },
+            {
+                category: 'crm',
+                title: 'Deal Pipeline Health Monitor',
+                description: 'Track deal progress, identify at-risk opportunities, and alert sales managers about deals requiring attention.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'High',
+                value: '$3K-6K',
+                clientType: 'All Industries',
+                tech: ['Pipedrive', 'OpenAI', 'Teams', 'Power BI']
+            },
+            {
+                category: 'sales',
+                title: 'Contract Renewal Alert System',
+                description: 'Monitor contract expiration dates, calculate renewal probability, and trigger outreach campaigns 90/60/30 days before expiry.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Very High',
+                value: '$2K-5K',
+                clientType: 'SaaS, Agencies',
+                tech: ['Salesforce', 'Gmail', 'Slack', 'Airtable']
+            },
+            {
+                category: 'crm',
+                title: 'Customer Health Score Calculator',
+                description: 'Aggregate product usage, support tickets, NPS scores, and engagement to calculate customer health and predict churn.',
+                complexity: 'Advanced',
+                time: '8-10 hours',
+                roi: 'Very High',
+                value: '$5K-9K',
+                clientType: 'SaaS',
+                tech: ['Segment', 'PostgreSQL', 'OpenAI', 'Gainsight']
+            },
+            {
+                category: 'sales',
+                title: 'Upsell & Cross-sell Recommendation Engine',
+                description: 'Analyze customer purchase history, recommend relevant products/services with AI, auto-send personalized offers.',
+                complexity: 'Advanced',
+                time: '7-9 hours',
+                roi: 'Very High',
+                value: '$5K-9K',
+                clientType: 'E-commerce, SaaS',
+                tech: ['Shopify', 'OpenAI', 'Klaviyo', 'Stripe']
+            },
+            {
+                category: 'sales',
+                title: 'Win-back Campaign for Inactive Customers',
+                description: 'Identify dormant customers, create personalized win-back offers, track re-engagement, measure campaign ROI.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'Very High',
+                value: '$2K-4K',
+                clientType: 'E-commerce, SaaS, Agencies',
+                tech: ['Mailchimp', 'Shopify', 'OpenAI', 'Google Sheets']
+            },
+
+            // E-COMMERCE (12 projects)
+            {
+                category: 'ecommerce',
+                title: 'Abandoned Cart Recovery System',
+                description: 'Track abandoned carts, send personalized recovery emails with AI-generated product recommendations and dynamic discount codes.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Very High',
+                value: '$1.5K-3K',
+                clientType: 'E-commerce',
+                tech: ['Shopify', 'Klaviyo', 'OpenAI', 'Google Sheets']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Product Review Request & Management',
+                description: 'Automatically request reviews post-purchase, monitor review sites, respond to feedback, and showcase positive reviews.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'High',
+                value: '$800-1.5K',
+                clientType: 'E-commerce',
+                tech: ['Shopify', 'Trustpilot', 'Gmail', 'Slack']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Inventory Low Stock Alert & Reorder System',
+                description: 'Monitor inventory levels, predict stockouts using AI, automatically create purchase orders and notify suppliers.',
+                complexity: 'Intermediate',
+                time: '5-6 hours',
+                roi: 'High',
+                value: '$2K-4K',
+                clientType: 'E-commerce',
+                tech: ['Shopify', 'Google Sheets', 'Email', 'Slack']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Dynamic Pricing & Competitor Monitor',
+                description: 'Track competitor pricing in real-time, adjust your prices dynamically, and get alerts for market changes.',
+                complexity: 'Advanced',
+                time: '7-9 hours',
+                roi: 'Very High',
+                value: '$4K-7K',
+                clientType: 'E-commerce',
+                tech: ['Apify', 'Shopify API', 'OpenAI', 'PostgreSQL']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Multi-Channel Order Sync System',
+                description: 'Synchronize orders from Amazon, eBay, Shopify, and marketplaces into one system with automated fulfillment routing.',
+                complexity: 'Advanced',
+                time: '8-10 hours',
+                roi: 'High',
+                value: '$5K-9K',
+                clientType: 'E-commerce',
+                tech: ['Shopify', 'Amazon API', 'ShipStation', 'Airtable']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Post-Purchase Upsell Sequence',
+                description: 'Send thank-you emails with complementary product recommendations, track opens/clicks, measure conversion rates.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'High',
+                value: '$1K-2K',
+                clientType: 'E-commerce',
+                tech: ['Shopify', 'Klaviyo', 'OpenAI', 'Google Analytics']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Customer Segmentation & Personalization',
+                description: 'Segment customers by purchase behavior, send personalized product recommendations, track segment performance.',
+                complexity: 'Intermediate',
+                time: '5-7 hours',
+                roi: 'High',
+                value: '$3K-5K',
+                clientType: 'E-commerce',
+                tech: ['Shopify', 'Segment', 'Klaviyo', 'OpenAI']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Return & Refund Process Automation',
+                description: 'Handle return requests, generate return labels, process refunds, update inventory, and collect feedback.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'E-commerce',
+                tech: ['Shopify', 'ShipStation', 'Stripe', 'Zendesk']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Pre-Order & Back-in-Stock Notifications',
+                description: 'Let customers subscribe to out-of-stock items, notify when available, track conversion rates.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'High',
+                value: '$1.5K-3K',
+                clientType: 'E-commerce',
+                tech: ['Shopify', 'Klaviyo', 'SMS', 'Airtable']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Loyalty Points & Rewards Automation',
+                description: 'Award points for purchases, track balances, send reward notifications, create VIP tiers.',
+                complexity: 'Intermediate',
+                time: '5-7 hours',
+                roi: 'High',
+                value: '$3K-6K',
+                clientType: 'E-commerce',
+                tech: ['Shopify', 'Smile.io', 'Klaviyo', 'Airtable']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Shipping Delay Notification System',
+                description: 'Track shipments, detect delays, proactively notify customers, offer compensation automatically.',
+                complexity: 'Intermediate',
+                time: '4-5 hours',
+                roi: 'Medium',
+                value: '$2K-3K',
+                clientType: 'E-commerce',
+                tech: ['ShipStation', 'Twilio', 'Gmail', 'Shopify']
+            },
+            {
+                category: 'ecommerce',
+                title: 'Product Launch Countdown Campaign',
+                description: 'Build hype for new products, send countdown emails, create urgency, track pre-orders.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'Medium',
+                value: '$1K-2K',
+                clientType: 'E-commerce',
+                tech: ['Shopify', 'Klaviyo', 'Social Media APIs', 'Google Sheets']
+            },
+
+            // HEALTHCARE (10 projects)
+            {
+                category: 'healthcare',
+                title: 'Appointment Reminder & Confirmation System',
+                description: 'Send automated SMS/email reminders, handle confirmations, reduce no-shows, and trigger follow-up surveys.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Very High',
+                value: '$1.5K-3K',
+                clientType: 'Healthcare',
+                tech: ['Calendly', 'Twilio', 'Google Calendar', 'Typeform']
+            },
+            {
+                category: 'healthcare',
+                title: 'Patient Intake Form Automation',
+                description: 'Digital intake forms with auto-validation, data extraction to EMR systems, and insurance verification workflows.',
+                complexity: 'Intermediate',
+                time: '5-7 hours',
+                roi: 'High',
+                value: '$3K-6K',
+                clientType: 'Healthcare',
+                tech: ['Typeform', 'Practice Fusion', 'DocuSign', 'Airtable']
+            },
+            {
+                category: 'healthcare',
+                title: 'Lab Results Notification System',
+                description: 'Automatically notify patients when lab results are ready, provide secure access links, and schedule follow-ups.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'Healthcare',
+                tech: ['EMR API', 'Twilio', 'SendGrid', 'Airtable']
+            },
+            {
+                category: 'healthcare',
+                title: 'Prescription Refill Request Automation',
+                description: 'Handle refill requests, verify insurance, check doctor approval, and send to pharmacy automatically.',
+                complexity: 'Advanced',
+                time: '7-9 hours',
+                roi: 'High',
+                value: '$4K-7K',
+                clientType: 'Healthcare',
+                tech: ['EMR System', 'Pharmacy API', 'Twilio', 'PostgreSQL']
+            },
+            {
+                category: 'healthcare',
+                title: 'Telemedicine Appointment Scheduler',
+                description: 'Schedule video appointments, send meeting links, handle rescheduling, collect payment upfront.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'High',
+                value: '$2K-4K',
+                clientType: 'Healthcare',
+                tech: ['Calendly', 'Zoom', 'Stripe', 'EMR System']
+            },
+            {
+                category: 'healthcare',
+                title: 'Patient Recall & Preventive Care Reminders',
+                description: 'Track due dates for checkups, vaccines, screenings. Send reminders and schedule appointments automatically.',
+                complexity: 'Intermediate',
+                time: '5-6 hours',
+                roi: 'Medium',
+                value: '$2.5K-4K',
+                clientType: 'Healthcare',
+                tech: ['EMR System', 'Twilio', 'Google Calendar', 'Airtable']
+            },
+            {
+                category: 'healthcare',
+                title: 'Insurance Verification Automation',
+                description: 'Verify patient insurance eligibility, check coverage, calculate copays, alert staff of issues.',
+                complexity: 'Advanced',
+                time: '7-10 hours',
+                roi: 'High',
+                value: '$5K-8K',
+                clientType: 'Healthcare',
+                tech: ['Eligibility API', 'EMR System', 'Slack', 'Airtable']
+            },
+            {
+                category: 'healthcare',
+                title: 'Medical Billing & Claims Submission',
+                description: 'Generate claims from visits, submit to insurance, track status, handle rejections automatically.',
+                complexity: 'Advanced',
+                time: '8-12 hours',
+                roi: 'High',
+                value: '$6K-10K',
+                clientType: 'Healthcare',
+                tech: ['EMR System', 'Clearinghouse API', 'QuickBooks', 'Slack']
+            },
+            {
+                category: 'healthcare',
+                title: 'Patient Satisfaction Survey Automation',
+                description: 'Send post-visit surveys, analyze feedback with AI, alert staff to negative reviews, track NPS.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'Medium',
+                value: '$1K-2K',
+                clientType: 'Healthcare',
+                tech: ['Typeform', 'Claude API', 'Slack', 'Google Sheets']
+            },
+            {
+                category: 'healthcare',
+                title: 'Medical Records Request Handler',
+                description: 'Process medical record requests, verify authorization, compile records, send securely.',
+                complexity: 'Intermediate',
+                time: '5-7 hours',
+                roi: 'Medium',
+                value: '$2.5K-5K',
+                clientType: 'Healthcare',
+                tech: ['EMR System', 'DocuSign', 'Secure FTP', 'Gmail']
+            },
+
+            // REAL ESTATE (10 projects)
+            {
+                category: 'realestate',
+                title: 'Lead Capture from Property Portals',
+                description: 'Automatically capture leads from Zillow, Realtor.com, and website, enrich with data, and route to agents.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'High',
+                value: '$1K-2.5K',
+                clientType: 'Real Estate',
+                tech: ['Zillow API', 'Follow Up Boss', 'Clearbit', 'Gmail']
+            },
+            {
+                category: 'realestate',
+                title: 'Property Showing Scheduler & Coordination',
+                description: 'Coordinate showing requests, match agent availability, send confirmations, and collect feedback post-showing.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'Real Estate',
+                tech: ['Calendly', 'Google Calendar', 'Twilio', 'Airtable']
+            },
+            {
+                category: 'realestate',
+                title: 'Transaction Document Management',
+                description: 'Organize closing documents, track signatures, send reminders, and update all parties on transaction progress.',
+                complexity: 'Intermediate',
+                time: '5-7 hours',
+                roi: 'High',
+                value: '$3K-6K',
+                clientType: 'Real Estate',
+                tech: ['DocuSign', 'Dotloop', 'Google Drive', 'Slack']
+            },
+            {
+                category: 'realestate',
+                title: 'Tenant Screening & Application Processing',
+                description: 'Automate tenant applications, run credit/background checks, verify income, and generate lease agreements.',
+                complexity: 'Advanced',
+                time: '7-10 hours',
+                roi: 'High',
+                value: '$4K-8K',
+                clientType: 'Real Estate',
+                tech: ['Rentspree', 'TransUnion API', 'DocuSign', 'Buildium']
+            },
+            {
+                category: 'realestate',
+                title: 'Rent Collection & Late Payment Automation',
+                description: 'Send payment reminders, process online payments, escalate late fees, and generate financial reports.',
+                complexity: 'Intermediate',
+                time: '5-6 hours',
+                roi: 'Very High',
+                value: '$2.5K-5K',
+                clientType: 'Real Estate',
+                tech: ['Stripe', 'Buildium', 'Twilio', 'QuickBooks']
+            },
+            {
+                category: 'realestate',
+                title: 'Property Listing Distribution',
+                description: 'Automatically post new listings to MLS, Zillow, Trulia, social media with optimized descriptions and photos.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'High',
+                value: '$2K-4K',
+                clientType: 'Real Estate',
+                tech: ['MLS API', 'Zillow', 'Buffer', 'OpenAI']
+            },
+            {
+                category: 'realestate',
+                title: 'Maintenance Request Management',
+                description: 'Receive tenant requests, assign to vendors, track progress, notify tenants of completion.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Medium',
+                value: '$1.5K-3K',
+                clientType: 'Real Estate',
+                tech: ['Buildium', 'Twilio', 'Gmail', 'Airtable']
+            },
+            {
+                category: 'realestate',
+                title: 'Lease Renewal Reminder System',
+                description: 'Track lease end dates, send renewal offers 90 days out, handle negotiations, generate new leases.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'High',
+                value: '$1.5K-3K',
+                clientType: 'Real Estate',
+                tech: ['Buildium', 'DocuSign', 'Gmail', 'Google Calendar']
+            },
+            {
+                category: 'realestate',
+                title: 'Open House Registration & Follow-up',
+                description: 'Collect visitor info at open houses, send property details, track interest, alert agents to hot leads.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'Medium',
+                value: '$1K-2K',
+                clientType: 'Real Estate',
+                tech: ['Google Forms', 'Follow Up Boss', 'Gmail', 'Airtable']
+            },
+            {
+                category: 'realestate',
+                title: 'Property Investment Analysis Tool',
+                description: 'Calculate ROI, cash flow, cap rates for properties. Generate investment reports automatically.',
+                complexity: 'Advanced',
+                time: '6-8 hours',
+                roi: 'Medium',
+                value: '$3K-5K',
+                clientType: 'Real Estate',
+                tech: ['Google Sheets', 'Zillow API', 'OpenAI', 'Airtable']
+            },
+
+            // MARKETING (12 projects)
+            {
+                category: 'marketing',
+                title: 'Social Media Content Calendar Automation',
+                description: 'Generate, schedule, and publish AI-created social media content across multiple platforms with performance tracking.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Medium',
+                value: '$1K-3K',
+                clientType: 'All Industries',
+                tech: ['Claude API', 'Buffer', 'Google Sheets', 'Slack']
+            },
+            {
+                category: 'marketing',
+                title: 'Social Media Comment & Message Responder',
+                description: 'Monitor all social channels for comments/DMs, categorize with AI (question/complaint/praise), draft responses, alert team.',
+                complexity: 'Intermediate',
+                time: '5-6 hours',
+                roi: 'High',
+                value: '$2K-4K',
+                clientType: 'E-commerce, Agencies',
+                tech: ['Facebook API', 'Instagram API', 'Claude API', 'Slack']
+            },
+            {
+                category: 'marketing',
+                title: 'Content Repurposing Engine',
+                description: 'Take one blog post, automatically create: social posts, email newsletter, LinkedIn article, Twitter thread, Instagram carousel.',
+                complexity: 'Advanced',
+                time: '6-8 hours',
+                roi: 'High',
+                value: '$3K-6K',
+                clientType: 'Agencies, Education',
+                tech: ['Claude API', 'Canva API', 'Buffer', 'WordPress']
+            },
+            {
+                category: 'marketing',
+                title: 'Email Campaign Performance Optimizer',
+                description: 'Analyze email campaign metrics, A/B test subject lines using AI, and automatically optimize send times for maximum engagement.',
+                complexity: 'Intermediate',
+                time: '4-5 hours',
+                roi: 'High',
+                value: '$2K-4K',
+                clientType: 'All Industries',
+                tech: ['Mailchimp', 'Claude API', 'Google Sheets', 'Mixpanel']
+            },
+            {
+                category: 'marketing',
+                title: 'User-Generated Content Collector',
+                description: 'Find customer photos/reviews mentioning your brand, request permission, organize in library, auto-post to social channels.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'Medium',
+                value: '$2K-3.5K',
+                clientType: 'E-commerce, Agencies',
+                tech: ['Instagram API', 'Gmail', 'Canva API', 'Buffer']
+            },
+            {
+                category: 'marketing',
+                title: 'Hashtag & Best Time to Post Optimizer',
+                description: 'Analyze which hashtags perform best, identify optimal posting times per platform, auto-schedule content at peak engagement.',
+                complexity: 'Intermediate',
+                time: '4-5 hours',
+                roi: 'Medium',
+                value: '$2K-3K',
+                clientType: 'E-commerce, Agencies',
+                tech: ['Buffer', 'Google Analytics', 'OpenAI', 'Airtable']
+            },
+            {
+                category: 'marketing',
+                title: 'Blog Post SEO Optimizer',
+                description: 'Analyze blog content for SEO, generate meta descriptions, suggest improvements, and auto-publish to WordPress with optimizations.',
+                complexity: 'Intermediate',
+                time: '4-5 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'All Industries',
+                tech: ['WordPress', 'Claude API', 'SEMrush', 'Google Docs']
+            },
+            {
+                category: 'marketing',
+                title: 'Newsletter Subscriber Growth Campaign',
+                description: 'Capture leads from multiple sources, verify emails, welcome sequence, and segment based on interests.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Medium',
+                value: '$1K-2K',
+                clientType: 'All Industries',
+                tech: ['ConvertKit', 'Clearbit', 'Zapier', 'Google Sheets']
+            },
+            {
+                category: 'marketing',
+                title: 'Webinar Registration & Follow-up System',
+                description: 'Manage webinar registrations, send reminders, record attendance, and trigger post-event nurture campaigns.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'High',
+                value: '$1K-2K',
+                clientType: 'Education, Agencies',
+                tech: ['Zoom', 'Mailchimp', 'Calendly', 'HubSpot']
+            },
+            {
+                category: 'marketing',
+                title: 'Podcast Production & Distribution',
+                description: 'Process audio files, generate transcripts with AI, create show notes, and distribute to podcast platforms.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'Agencies, Education',
+                tech: ['Descript', 'Claude API', 'Buzzsprout', 'WordPress']
+            },
+            {
+                category: 'marketing',
+                title: 'Review Generation & Display System',
+                description: 'Request reviews at optimal time, monitor responses, showcase 5-star reviews on website/social, respond to negative ones.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Very High',
+                value: '$1.5K-3K',
+                clientType: 'All Industries',
+                tech: ['Trustpilot', 'Google Reviews', 'WordPress', 'Gmail']
+            },
+            {
+                category: 'marketing',
+                title: 'Influencer Outreach Campaign Manager',
+                description: 'Find relevant influencers, personalize outreach messages, track responses, and manage collaboration workflows.',
+                complexity: 'Beginner',
+                time: '3-5 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'E-commerce, Agencies',
+                tech: ['Instagram API', 'OpenAI', 'Airtable', 'Gmail']
+            },
+
+            // AGENCY (8 projects)
+            {
+                category: 'agency',
+                title: 'Client Reporting Automation',
+                description: 'Pull data from ad platforms, analytics, CRM, generate branded reports with AI insights, and email to clients.',
+                complexity: 'Advanced',
+                time: '7-10 hours',
+                roi: 'High',
+                value: '$4K-8K',
+                clientType: 'Agencies',
+                tech: ['Google Ads', 'Facebook Ads', 'Data Studio', 'Claude API']
+            },
+            {
+                category: 'agency',
+                title: 'Project Kickoff & Asset Collection',
+                description: 'Automate new client onboarding, collect brand assets, create project in PM tool, and schedule kickoff call.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Medium',
+                value: '$1K-2K',
+                clientType: 'Agencies',
+                tech: ['Typeform', 'Asana', 'Google Drive', 'Calendly']
+            },
+            {
+                category: 'agency',
+                title: 'Time Tracking to Invoice Pipeline',
+                description: 'Aggregate team time entries, calculate costs, generate client invoices, and send with payment links.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'High',
+                value: '$2K-4K',
+                clientType: 'Agencies',
+                tech: ['Harvest', 'QuickBooks', 'Stripe', 'Gmail']
+            },
+            {
+                category: 'agency',
+                title: 'Content Approval Workflow',
+                description: 'Submit content for client review, track revisions, manage approvals, and publish approved content automatically.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'Agencies',
+                tech: ['Google Docs', 'Slack', 'WordPress', 'Airtable']
+            },
+            {
+                category: 'agency',
+                title: 'Lead Qualification & Routing System',
+                description: 'Qualify inbound leads with AI scoring, route to correct service team, and schedule discovery calls automatically.',
+                complexity: 'Intermediate',
+                time: '5-6 hours',
+                roi: 'High',
+                value: '$2.5K-5K',
+                clientType: 'Agencies',
+                tech: ['Typeform', 'OpenAI', 'Calendly', 'HubSpot']
+            },
+            {
+                category: 'agency',
+                title: 'Project Status Update Automation',
+                description: 'Send weekly project updates to clients, pull data from PM tools, highlight achievements and blockers.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'Medium',
+                value: '$1K-2K',
+                clientType: 'Agencies',
+                tech: ['Asana', 'Gmail', 'Google Docs', 'Slack']
+            },
+            {
+                category: 'agency',
+                title: 'Team Capacity Planning Dashboard',
+                description: 'Track team workload, identify bottlenecks, predict capacity issues, optimize resource allocation.',
+                complexity: 'Advanced',
+                time: '7-9 hours',
+                roi: 'High',
+                value: '$4K-7K',
+                clientType: 'Agencies',
+                tech: ['Harvest', 'Asana', 'Google Data Studio', 'Slack']
+            },
+            {
+                category: 'agency',
+                title: 'Client Feedback Collection System',
+                description: 'Send project completion surveys, collect testimonials, request case study participation, monitor satisfaction.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'Medium',
+                value: '$1K-2K',
+                clientType: 'Agencies',
+                tech: ['Typeform', 'Gmail', 'WordPress', 'Airtable']
+            },
+
+            // NICHE: FITNESS & WELLNESS (5 projects)
+            {
+                category: 'fitness',
+                title: 'Gym Membership Renewal Automation',
+                description: 'Track membership expiry dates, send renewal reminders, process payments, offer incentives for early renewal.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'High',
+                value: '$1.5K-3K',
+                clientType: 'Fitness & Wellness',
+                tech: ['Stripe', 'Mindbody', 'Twilio', 'Mailchimp']
+            },
+            {
+                category: 'fitness',
+                title: 'Personal Training Session Scheduler',
+                description: 'Let clients book sessions, handle cancellations/rescheduling, send reminders, track attendance.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Medium',
+                value: '$1.5K-3K',
+                clientType: 'Fitness & Wellness',
+                tech: ['Calendly', 'Mindbody', 'Google Calendar', 'Twilio']
+            },
+            {
+                category: 'fitness',
+                title: 'Workout Plan Delivery System',
+                description: 'Create custom workout plans, deliver via email/app, track completion, adjust based on progress.',
+                complexity: 'Intermediate',
+                time: '5-6 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'Fitness & Wellness',
+                tech: ['Google Sheets', 'Mailchimp', 'Trainerize', 'Airtable']
+            },
+            {
+                category: 'fitness',
+                title: 'Class Registration & Waitlist Manager',
+                description: 'Handle class registrations, manage waitlists, notify when spots open, track attendance.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Medium',
+                value: '$1.5K-3K',
+                clientType: 'Fitness & Wellness',
+                tech: ['Mindbody', 'Twilio', 'Gmail', 'Airtable']
+            },
+            {
+                category: 'fitness',
+                title: 'Member Progress Tracking & Motivation',
+                description: 'Track member goals, log workouts, send encouragement messages, celebrate milestones.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'Fitness & Wellness',
+                tech: ['Trainerize', 'Twilio', 'Google Sheets', 'Mailchimp']
+            },
+
+            // NICHE: BEAUTY & SALON (5 projects)
+            {
+                category: 'beauty',
+                title: 'Salon Appointment Booking & Reminders',
+                description: 'Online booking, send confirmations and reminders, handle cancellations, reduce no-shows.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'High',
+                value: '$1.5K-3K',
+                clientType: 'Beauty & Salon',
+                tech: ['Square', 'Vagaro', 'Twilio', 'Google Calendar']
+            },
+            {
+                category: 'beauty',
+                title: 'Client Birthday & Anniversary Specials',
+                description: 'Track client birthdays, send special offers, book appointments, increase loyalty.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'Medium',
+                value: '$1K-2K',
+                clientType: 'Beauty & Salon',
+                tech: ['Vagaro', 'Mailchimp', 'Twilio', 'Airtable']
+            },
+            {
+                category: 'beauty',
+                title: 'Product Inventory & Reorder System',
+                description: 'Track salon product inventory, alert when low, automatically create reorder lists, manage suppliers.',
+                complexity: 'Intermediate',
+                time: '4-5 hours',
+                roi: 'Medium',
+                value: '$2K-3K',
+                clientType: 'Beauty & Salon',
+                tech: ['Google Sheets', 'Square', 'Gmail', 'Slack']
+            },
+            {
+                category: 'beauty',
+                title: 'Review Request After Service',
+                description: 'Send review requests after appointments, monitor responses, showcase positive reviews, address negative ones.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'High',
+                value: '$1K-2K',
+                clientType: 'Beauty & Salon',
+                tech: ['Vagaro', 'Google Reviews', 'Mailchimp', 'Slack']
+            },
+            {
+                category: 'beauty',
+                title: 'Membership & Package Sales Automation',
+                description: 'Promote memberships, track package usage, send renewal reminders, upsell additional services.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'High',
+                value: '$2K-4K',
+                clientType: 'Beauty & Salon',
+                tech: ['Vagaro', 'Stripe', 'Mailchimp', 'Airtable']
+            },
+
+            // NICHE: RESTAURANTS (5 projects)
+            {
+                category: 'restaurant',
+                title: 'Online Reservation & Table Management',
+                description: 'Handle online reservations, manage table assignments, send confirmations, handle waitlists.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Medium',
+                value: '$1.5K-3K',
+                clientType: 'Restaurants',
+                tech: ['OpenTable', 'Resy', 'Twilio', 'Google Calendar']
+            },
+            {
+                category: 'restaurant',
+                title: 'Online Ordering & Delivery Integration',
+                description: 'Sync orders from website, UberEats, DoorDash into one system, manage kitchen tickets, track deliveries.',
+                complexity: 'Advanced',
+                time: '7-9 hours',
+                roi: 'High',
+                value: '$4K-7K',
+                clientType: 'Restaurants',
+                tech: ['Square', 'UberEats API', 'DoorDash API', 'Slack']
+            },
+            {
+                category: 'restaurant',
+                title: 'Customer Loyalty Program Automation',
+                description: 'Track customer visits/spend, award points, send rewards, create VIP tiers, boost repeat business.',
+                complexity: 'Intermediate',
+                time: '5-6 hours',
+                roi: 'High',
+                value: '$2.5K-5K',
+                clientType: 'Restaurants',
+                tech: ['Square', 'Mailchimp', 'SMS', 'Airtable']
+            },
+            {
+                category: 'restaurant',
+                title: 'Inventory & Food Cost Tracker',
+                description: 'Track ingredient usage, calculate food costs per dish, alert when low, optimize menu pricing.',
+                complexity: 'Intermediate',
+                time: '5-7 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'Restaurants',
+                tech: ['Google Sheets', 'Square', 'Gmail', 'Slack']
+            },
+            {
+                category: 'restaurant',
+                title: 'Event Booking & Catering Inquiry Handler',
+                description: 'Handle private event inquiries, send menus and pricing, manage bookings, coordinate with kitchen.',
+                complexity: 'Intermediate',
+                time: '4-6 hours',
+                roi: 'Medium',
+                value: '$2K-4K',
+                clientType: 'Restaurants',
+                tech: ['Typeform', 'Gmail', 'Google Calendar', 'Stripe']
+            },
+
+            // ADDITIONAL UNIVERSAL PROJECTS
+            {
+                category: 'support',
+                title: 'AI-Powered Customer Support Ticket Routing',
+                description: 'Classify incoming support tickets using AI, route to appropriate teams, and provide automated responses for common issues.',
+                complexity: 'Advanced',
+                time: '6-8 hours',
+                roi: 'Very High',
+                value: '$4K-8K',
+                clientType: 'SaaS, E-commerce',
+                tech: ['Zendesk', 'Claude API', 'Twilio', 'PostgreSQL']
+            },
+            {
+                category: 'support',
+                title: 'Client Check-in & Satisfaction Monitor',
+                description: 'Schedule regular check-ins with clients, send satisfaction surveys, alert team to unhappy clients, trigger retention campaigns.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'High',
+                value: '$1.5K-3K',
+                clientType: 'All Industries',
+                tech: ['Typeform', 'Gmail', 'Slack', 'Airtable']
+            },
+            {
+                category: 'finance',
+                title: 'Late Payment Recovery Sequence',
+                description: 'Multi-touch payment reminders (email, SMS, phone), escalating urgency, automatic late fees, collections handoff.',
+                complexity: 'Intermediate',
+                time: '4-5 hours',
+                roi: 'Very High',
+                value: '$2K-4K',
+                clientType: 'All Industries',
+                tech: ['QuickBooks', 'Stripe', 'Twilio', 'Gmail']
+            },
+            {
+                category: 'finance',
+                title: 'Subscription Billing Issue Resolver',
+                description: 'Detect failed payments, update credit cards, retry charges, pause service if needed, alert customers before cancellation.',
+                complexity: 'Intermediate',
+                time: '5-6 hours',
+                roi: 'Very High',
+                value: '$3K-5K',
+                clientType: 'SaaS, Fitness',
+                tech: ['Stripe', 'Chargebee', 'Intercom', 'Slack']
+            },
+            {
+                category: 'data',
+                title: 'Weekly Client Performance Report',
+                description: 'Aggregate campaign data, generate client-branded reports with insights, compare to goals, send automatically every Monday.',
+                complexity: 'Intermediate',
+                time: '5-7 hours',
+                roi: 'High',
+                value: '$2.5K-5K',
+                clientType: 'Agencies',
+                tech: ['Google Ads', 'Facebook Ads', 'Data Studio', 'SendGrid']
+            },
+            {
+                category: 'data',
+                title: 'Revenue Attribution & ROI Tracker',
+                description: 'Track every lead source to closed deal, calculate true ROI per channel, identify what actually drives revenue.',
+                complexity: 'Advanced',
+                time: '8-10 hours',
+                roi: 'Very High',
+                value: '$5K-10K',
+                clientType: 'SaaS, E-commerce, Agencies',
+                tech: ['Google Analytics', 'Salesforce', 'Stripe', 'Looker']
+            },
+            {
+                category: 'productivity',
+                title: 'Email Inbox Organizer & Auto-Responder',
+                description: 'Categorize incoming emails with AI, auto-respond to common questions, flag urgent items, archive noise.',
+                complexity: 'Beginner',
+                time: '2-3 hours',
+                roi: 'High',
+                value: '$800-1.5K',
+                clientType: 'All Industries',
+                tech: ['Gmail', 'Claude API', 'Google Sheets', 'Slack']
+            },
+            {
+                category: 'productivity',
+                title: 'Meeting Scheduler with Conflict Avoidance',
+                description: 'Check all team calendars, find optimal meeting times, send invites, avoid back-to-back meetings, block focus time.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'Medium',
+                value: '$1K-2K',
+                clientType: 'All Industries',
+                tech: ['Google Calendar', 'Calendly', 'Slack', 'Zoom']
+            },
+            {
+                category: 'legal',
+                title: 'Client Intake & Conflict Check System',
+                description: 'Automated client intake forms, conflict of interest checks, retainer agreement generation and e-signature.',
+                complexity: 'Intermediate',
+                time: '5-7 hours',
+                roi: 'High',
+                value: '$3K-6K',
+                clientType: 'Legal',
+                tech: ['Clio', 'Typeform', 'DocuSign', 'Airtable']
+            },
+            {
+                category: 'education',
+                title: 'Course Enrollment & Onboarding Automation',
+                description: 'Process enrollments, send welcome sequences, grant LMS access, and deliver course materials automatically.',
+                complexity: 'Beginner',
+                time: '3-4 hours',
+                roi: 'High',
+                value: '$1K-2.5K',
+                clientType: 'Education',
+                tech: ['Teachable', 'Kajabi', 'Mailchimp', 'Zapier']
+            }
+        ];
+
+        let showClientType = false;
+        let activeCategory = 'all';
+
+        // Generate categories with counts
+        const categories = [
+            { id: 'all', label: 'All', count: projects.length }
+        ];
+
+        const uniqueCategories = [...new Set(projects.map(p => p.category))];
+        uniqueCategories.forEach(cat => {
+            categories.push({
+                id: cat,
+                label: cat.charAt(0).toUpperCase() + cat.slice(1).replace(/([A-Z])/g, ' $1'),
+                count: projects.filter(p => p.category === cat).length
+            });
+        });
+
+        // Render category tabs
+        function renderTabs() {
+            const tabsContainer = document.getElementById('categoryTabs');
+            tabsContainer.innerHTML = categories.map(cat => 
+                `<button class="tab ${cat.id === activeCategory ? 'active' : ''}" onclick="filterByCategory('${cat.id}')">
+                    ${cat.label} (${cat.count})
+                </button>`
+            ).join('');
+        }
+
+        // Render projects
+        function renderProjects(filteredProjects) {
+            const container = document.getElementById('projectsContainer');
+            
+            if (filteredProjects.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: #94a3b8; padding: 40px;">No projects found. Try a different search or category.</p>';
+                return;
+            }
+
+            container.innerHTML = filteredProjects.map(project => `
+                <div class="project-card">
+                    <span class="project-category">${project.category.toUpperCase()}</span>
+                    <div class="project-title">${project.title}</div>
+                    <div class="client-type ${showClientType ? '' : 'hidden'}">👥 Ideal for: ${project.clientType}</div>
+                    <div class="project-description">${project.description}</div>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Complexity:</span><br>
+                            <span class="complexity-badge complexity-${project.complexity.toLowerCase()}">${project.complexity}</span>
+                        </div>
+                        <div class="detail-item"><span class="detail-label">Time:</span> ${project.time}</div>
+                        <div class="detail-item"><span class="detail-label">ROI:</span> ${project.roi}</div>
+                        <div class="detail-item"><span class="detail-label">Value:</span> ${project.value}</div>
+                    </div>
+                    <div class="tech-stack">
+                        ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('resultsCount').textContent = 
+                `Showing ${filteredProjects.length} of ${projects.length} projects`;
+        }
+
+        // Filter projects
+        function filterProjects() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            
+            let filtered = projects.filter(project => {
+                const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
+                const matchesSearch = 
+                    project.title.toLowerCase().includes(searchTerm) ||
+                    project.description.toLowerCase().includes(searchTerm) ||
+                    project.clientType.toLowerCase().includes(searchTerm) ||
+                    project.tech.some(tech => tech.toLowerCase().includes(searchTerm));
+                
+                return matchesCategory && matchesSearch;
+            });
+
+            renderProjects(filtered);
+        }
+
+        // Filter by category
+        function filterByCategory(category) {
+            activeCategory = category;
+            renderTabs();
+            filterProjects();
+        }
+
+        // Toggle client type visibility
+        document.getElementById('toggleClientType').addEventListener('click', function() {
+            showClientType = !showClientType;
+            this.textContent = showClientType ? '👁️ Hide Client Types' : '👁️ Show Client Types';
+            filterProjects();
+        });
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', filterProjects);
+
+        // Download HTML
+        function downloadHTML() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'techva-n8n-100-projects-ultimate-2026.html';
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            // Show success message
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '✅ Downloaded Successfully! (100 Projects)';
+            btn.style.background = 'linear-gradient(135deg, #059669 0%, #047857 100%)';
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+            }, 3000);
+        }
+
+        // Initialize
+        renderTabs();
+        renderProjects(projects);
+
+        // Update total categories
+        document.getElementById('totalCategories').textContent = categories.length - 1;
+    </script>
+</body>
+</html>
